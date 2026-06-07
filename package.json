@@ -1,0 +1,53 @@
+{
+  "name": "opencode-auto-reviewer",
+  "version": "0.1.0",
+  "description": "OpenCode plugin that acts as a supervisor to detect conceptual loops",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "vitest run",
+    "test:cov": "vitest run --coverage"
+  },
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "auto-reviewer",
+    "supervisor"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@opencode-ai/plugin": "^1.14.48",
+    "@types/node": "^22.0.0",
+    "@vitest/coverage-v8": "^4.1.5",
+    "typescript": "^5.8.0",
+    "vitest": "^4.1.5"
+  },
+  "peerDependencies": {
+    "@opencode-ai/plugin": ">=1.2.0"
+  },
+  "dependencies": {
+    "@opencode-ai/sdk": "^1.14.48"
+  },
+  "author": "joeyism",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joeyism/opencode-auto-reviewer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joeyism/opencode-auto-reviewer/issues"
+  },
+  "homepage": "https://github.com/joeyism/opencode-auto-reviewer#readme"
+}
